@@ -1,14 +1,21 @@
 import java.math.BigDecimal;
+import java.util.List;
 
 public class Journey {
     private String name;
     private String description;
     private BigDecimal price;
+    private List<Chapter> chapters;
 
-    public Journey(String name, String description, BigDecimal price) {
+    public Journey(String name, String description, BigDecimal price, List<Chapter> chapters) {
+       setChapters(chapters);
         setName(name);
         setDescription(description);
         setPrice(price);
+    }
+
+    public void setChapters(List<Chapter> chapters) {
+        this.chapters =  chapters;
     }
 
     public void setName(String name) {
@@ -30,6 +37,10 @@ public class Journey {
             throw new IllegalArgumentException("The price should be > 1");
         }
         this.price = price;
+    }
+
+    public List<Chapter> getChapters() {
+        return chapters;
     }
 
     public String getName() {

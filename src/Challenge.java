@@ -1,9 +1,9 @@
-public class Chapter {
+public class Challenge {
     private int number;
     private String name;
     private Journey journey;
 
-    public  Chapter(int number, String name){
+    public  Challenge(int number, String name){
         setNumber(number);
         setName(name);
     }
